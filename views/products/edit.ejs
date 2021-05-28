@@ -1,0 +1,46 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+
+<div class="container" style="margin-top: 70px;">
+    <form class="needs-validation" action="/products/<%= product._id %>?_method=PATCH" method="POST" style="width: 50%; margin:0 auto;" novalidate>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Product Name" name="product[name]" value="<%= product.name %>" required>
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="img" name="product[img]" placeholder="Image URL" value="<%= product.img %>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Provide Image URL
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price in $</label>
+            <input type="number" class="form-control" id="price" name="product[price]" placeholder="Price" min="0" value="<%= product.price %>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <textarea class="form-control" name="product[desc]" id="desc" cols="30" rows="5" required><%= product.desc %></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please Write Description
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+
+<%- include("../partials/footer") %> 

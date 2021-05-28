@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(to right bottom, #edf2fb, #abc4ff);
+  background-attachment: fixed;
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+
+.card img {
+  padding: 7px;
+  height: 220px;
+}
+
+.products .card {
+  box-shadow: 0px 5px 10px #5786f3;
+  margin: 10px auto;
+}
+
+.products {
+  margin: 10px auto;
+}
+
+.heading {
+  width: 97%;
+  background-color: #a8c9eb;
+  padding: 16px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
